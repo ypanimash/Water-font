@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css2?family=Potta+One&display=swap);
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Potta One', cursive;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+}
+
+.container{
+    position: relative;
+}
+
+.container h2{
+    position: absolute;
+    font-size: 8em;
+    transform: translate(-50%, -50%);
+}
+
+.container h2:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke: 1px rgb(0, 0, 226);
+
+} 
+
+.container h2:nth-child(2){
+    color: rgb(0, 0, 226);
+    animation: animate 3s ease-in-out infinite;
+}
+
+@keyframes animate{
+    0%, 100%{
+        clip-path: polygon(0% 51%, 7% 56%, 16% 61%, 23% 65%, 33% 68%, 41% 66%, 47% 60%, 
+        54% 53%, 65% 51%, 72% 52%, 80% 55%, 86% 61%, 92% 66%, 100% 68%, 100% 99%, 0% 100%);
+    }
+    50%{
+        clip-path: polygon(0 68%, 7% 59%, 16% 53%, 26% 49%, 36% 53%, 44% 59%, 51% 65%, 59% 
+        69%, 68% 69%, 76% 64%, 82% 58%, 89% 54%, 97% 55%, 100% 62%, 100% 99%, 0% 100%);
+    }
+
+
+}
